@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaMask Integration</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+  <script src="https://bundle.run/buffer@6.0.3"></script>
+  <script src="js/app-eth.js" defer></script>
+  <style>
+    body {
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div>
+    <a id="eth" class="btn btn-primary" role="link" href="index.html">MetaMask</a>
+    <a id="tron" class="btn btn-primary" role="link" href="tron.html">Tronlink</a>
+<!--    <a id="ledger" class="btn btn-primary" role="link" href="ledger.html">Ledger</a>-->
+  </div>
+
+  <h1 class="text-center mb-4">MetaMask Integration</h1>
+  <div class="text-center mb-3">
+    <button id="connectButton" class="btn btn-primary">Connect MetaMask</button>
+  </div>
+  <div id="userAddress" class="text-center mb-4"></div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">USDT Balance</h2>
+      <button id="getBalanceButton" class="btn btn-info">Get USDT Balance</button>
+      <div id="usdtBalance" class="mt-2"></div>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Sign Message</h2>
+      <input type="text" id="message" class="form-control mb-2" placeholder="Enter message to sign" />
+      <button id="signButton" class="btn btn-success">Sign Message</button>
+      <div id="signature" class="mt-2"></div>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Verify Signature</h2>
+      <input type="text" id="verifyMessage" class="form-control mb-2" placeholder="Enter message to verify" />
+      <input type="text" id="verifySignature" class="form-control mb-2" placeholder="Enter signature to verify" />
+      <button id="verifyButton" class="btn btn-warning">Verify Signature</button>
+      <div id="verificationResult" class="mt-2"></div>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Transfer USDT</h2>
+      <input type="text" id="recipient" class="form-control mb-2" placeholder="Recipient Address" />
+      <input type="number" id="amount" class="form-control mb-2" placeholder="Amount" />
+      <button id="transferButton" class="btn btn-danger">Transfer USDT</button>
+      <div id="transferResult" class="mt-2"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
